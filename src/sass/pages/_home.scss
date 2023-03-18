@@ -1,0 +1,98 @@
+/* home */
+@use '../abstracts/index' as *;
+
+// @use 'components/header';
+
+.container {
+    --max-width: 1110px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+.columns {
+    display: grid;
+    gap: .5rem;
+    background: $dark-200;
+}
+
+[role=list] {
+    display: grid;
+    gap: 1rem;
+}
+
+
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+body {
+    background: $dark-100;
+    color: $teal;
+    font-family: 'Cinzel', serif;
+}
+
+
+/* Header */
+
+header {
+    margin: 2rem;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+// .container .project {
+
+// }
+.project {
+   font-size: 40px;
+   color: $brown-400;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Button */
+
+.button {
+    background-color: $dark-200;
+    border: none;
+    color: $dark-400;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px $dark-200;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Body */
+
+
+
+/* Footer */
+
+.footer-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
